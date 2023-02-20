@@ -1,0 +1,152 @@
+
+
+
+hr {
+  margin: 10px;
+  border-color: rgb(38, 78, 122);
+  border-width: 4px;
+}
+
+body{
+  font-family: 'Zen Old Mincho', serif;
+}
+
+
+
+header {
+  z-index: 10; /*ボックスの重なり順序を指定する*/
+  height: 80px;
+  /* position: absolute; */
+  top: 300px;
+  background-color: rgb(0, 51, 102);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+ul {
+  overflow: hidden;
+  list-style: none;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+ul li {
+  display: inline-block;
+  padding: 10px 10px 20px 10px;
+  font-family: 'Zen Old Mincho', serif;
+}
+
+
+
+a {
+  color: rgb(247, 243, 233);
+  text-transform: uppercase; /* すべての文字を大文字にする*/
+}
+
+.btn4 {
+  text-transform: uppercase;
+  text-align: center; /* 中央寄せ*/
+  position: relative; /* 要素を配置する基準を指定する　移動するときの基準がもとの位置*/
+  text-decoration: none; /* テキストの装飾的な線の表示*/
+  display: inline-block;
+}
+
+.btn::before {
+  /* スタイル要素を前か後ろに追加できる　*/
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #3367ff;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.btn4:hover::before {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.box {
+  margin: 2em auto;
+  padding: 2em; /*内側の余白*/
+  background: none; /*元のボックス背景色なし*/
+  border: 1px solid #ccc; /*線の太さ・種類・色*/
+  position: relative; /*配置（基準）*/
+}
+.box:after {
+  background-color: rgb(247, 243, 233); /*ずらしたボックスの背景色*/
+  border: none;
+  content: "";
+  position: absolute; /*配置（ここを動かす）*/
+  top: 9px; /*上から7pxずらす*/
+  left: 9px; /*左から7pxずらす*/
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.box a{
+  color: rgb(95, 150, 204);
+}
+
+.box a:hover, a:active {
+  color: rgb(168, 206, 247);
+}
+
+
+
+a:hover, a:active {
+  color: rgb(255, 255, 255);
+}
+
+.btn2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid rgb(204, 227, 239);
+}
+
+h2 {
+  color: rgb(34, 79, 122);
+  margin-top: 30px;
+  padding: 1rem 2rem;
+  border-left: 6px double rgb(128, 194, 229);
+}
+
+.bottom_space {
+  margin-bottom: 15px;
+}
+
+.subtitle{
+  color: rgb(34, 79, 122);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer{
+  text-align: center;
+  border-top: solid 1px lightgray;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: rgb(38, 78, 122);
+  color: antiquewhite;
+  
+}
